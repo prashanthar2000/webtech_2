@@ -1,0 +1,348 @@
+<html>
+    <head><title>compare</title>
+    <style>
+        form{
+            display: inline-block;
+        }
+
+
+        select{
+            width: 300px;
+            height: 40px;
+        }
+        #dd1,#dd2,#dd3{
+            margin: 60px;
+            padding: 10px;
+            position: relative;
+            left: 10%;
+        }
+        .features {
+  background: white;
+  color: gray;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.features figure {
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+}
+
+.features figure img {
+  border: 1px solid white;
+  height:200px;
+  box-shadow: gray 0 0 10px;
+  width: 300px;
+}
+#MyImg1,#MyImg2,#MyImg3 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#MyImg1:hover {opacity: 0.7;}
+#MyImg2:hover {opacity: 0.7;}
+#MyImg3:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+#sp{
+  border-bottom: 10px black;
+
+}
+#enginesubct {line-height: 1.42857143;
+font-style: normal;
+font-size: 13px;
+font-family: Arial,sans-serif;
+color: #666;
+border-collapse: collapse;
+border-spacing: 0;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+#eg{
+  width: 100%;
+}
+        
+    </style>
+    
+    
+    </head>
+    <body>
+        <h1 id="heading" align="center">Compare car models</h1>
+        <div id="dropdown">
+            <form action="" id=>
+                <select name="" id="dd1">
+                    <option value="audi">Audi</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Lambhorgini">Lamborghini</option>
+                </select>
+               <select name="" id="dd2">
+                        <option value="audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Porsche">Porsche</option>
+                        <option va lue="Lambhorgini">Lamborghini</option>
+                    </select>
+                    <select name="" id="dd3">
+                        <option value="audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Porsche">Porsche</option>
+                        <option va lue="Lambhorgini">Lamborghini</option>
+                    </select>
+                
+
+            </form>
+            <section class="features">
+              <!--   You'll notice the img urls are strange, I had to upload them to google drive   -->
+              <figure>
+                  <img src="rolls-phantom-gentlemans-tourer-01.jpg" id="MyImg1" alt="car1" width="300" height="200">
+                  <figcaption></figcaption>
+                </figure>
+                <figure>
+                    <img src="rolls-phantom-gentlemans-tourer-01.jpg" id="MyImg2" alt="car2" width="300" height="200">
+                    <figcaption></figcaption>
+                  </figure>
+                  <figure>
+                      <img src="rolls-phantom-gentlemans-tourer-01.jpg" id="MyImg3" alt="car3"width="300" height="200">
+                      <figcaption></figcaption>
+                    </figure>
+            </section>
+        </div>
+        
+          <div id="myModal" class="modal">
+            <span class="close">×</span>
+            <img class="modal-content" id="img01" >
+            <div id="caption"></div>
+          </div>
+          <div id="cheader">
+            <span id="sp">Engine and transmission</span>
+          </div>
+          <div id="enginesubct">
+            <tbody id="eg"><tr itemmasterid="484"><td class="left v-shadow">Engine  </td>
+              <td>
+                1956cc, 4 Cylinders Inline, 4 Valves/Cylinder, DOHC
+              </td>
+              <td>
+                1956cc, 4 Cylinders Inline, 4 Valves/Cylinder, DOHC
+              </td>
+              <td class="cc-spsd-colm">
+                1956cc, 4 Cylinders Inline, 4 Valves/Cylinder, DOHC
+              </td>
+                              <td></td>
+        </tr>
+        <tr itemmasterid="13"><td class="left v-shadow">Engine Type  </td>
+              <td>
+                2.0L Turbocharged Diesel
+              </td>
+              <td>
+                Kryotec, 2.0L Turbocharged Engine
+              </td>
+              <td class="cc-spsd-colm">
+                <span class="cc-sprite grey-none"></span>
+              </td>
+                              <td></td>
+        </tr>
+        <tr itemmasterid="26"><td class="left v-shadow">Fuel Type   </td>
+              <td>
+                Diesel
+              </td>
+              <td>
+                Diesel
+              </td>
+              <td class="cc-spsd-colm">
+                Diesel
+              </td>
+                              <td></td>
+        </tr>
+        <tr itemmasterid="249"><td class="left v-shadow">Max Power (bhp@rpm)  </td>
+              <td>
+                168 bhp @ 3750 rpm
+              </td>
+              <td>
+                138 bhp @ 3750 rpm
+              </td>
+              <td class="cc-spsd-colm">
+                171 bhp @ 3750 rpm
+              </td>
+                              <td></td>
+        </tr>
+        <tr itemmasterid="250"><td class="left v-shadow">Max Torque (Nm@rpm)  </td>
+              <td>
+                350 Nm @ 1750 rpm
+              </td>
+              <td>
+                350 Nm @ 1750 rpm
+              </td>
+              <td class="cc-spsd-colm">
+                350 Nm @ 1750 rpm
+              </td>
+                              <td></td>
+        </tr>
+        <tr itemmasterid="12"><td class="left v-shadow">Mileage (ARAI)  (kmpl)</td>
+              <td>
+                17.41
+              </td>
+              <td>
+                <span class="cc-sprite grey-none"></span>
+              </td>
+              <td class="cc-spsd-colm">
+                17.1
+              </td>
+                              <td></td>
+        </tr>
+        <tr itemmasterid="31"><td class="left v-shadow">Drivetrain  </td>
+              <td>
+                <span class="cc-sprite grey-none"></span>
+              </td>
+              <td>
+                FWD
+              </td>
+              <td class="cc-spsd-colm">
+                FWD
+              </td>
+                              <td></td>
+        </tr>
+        <tr itemmasterid="500"><td class="left v-shadow">Transmission  </td>
+              <td>
+                Manual - 6 Gears
+              </td>
+              <td>
+                Manual - 6 Gears
+              </td>
+              <td class="cc-spsd-colm">
+                Manual - 6 Gears
+              </td>
+                              <td></td>
+        </tr>
+        <tr itemmasterid="501"><td class="left v-shadow">Turbocharger / Supercharger  </td>
+              <td>
+                Turbocharged
+              </td>
+              <td>
+                Turbocharged, Variable Geometry
+              </td>
+              <td class="cc-spsd-colm">
+                Turbocharged
+              </td>
+                              <td></td>
+        </tr>
+    </tbody>
+          </div>
+          <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+            
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById('MyImg1');
+            var img2 = document.getElementById('MyImg2');
+            var img3 = document.getElementById('MyImg3');
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
+            img2.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
+            img3.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
+            var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+          
+        
+    </body>
+</html>
