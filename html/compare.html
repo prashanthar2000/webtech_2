@@ -1,0 +1,490 @@
+<html>
+
+<head>
+    <title>compare</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+
+        select {
+            width: 300px;
+            height: 40px;
+        }
+
+        .features {
+            background: white;
+            color: gray;
+            padding: 40px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: gray;
+        }
+
+        .features figure {
+            margin: auto;
+            padding: 3px;
+            margin-left: 63px;
+            text-align: center;
+            text-transform: uppercase;
+            width: 200px;
+
+        }
+
+        .features figure img {
+            border: 1px solid white;
+            height: 200px;
+            box-shadow: gray 0 0 10px;
+            width: 300px;
+        }
+
+        #MyImg1,
+        #MyImg2,
+        #MyImg3 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #MyImg1:hover {
+            opacity: 0.7;
+        }
+
+        #MyImg2:hover {
+            opacity: 0.7;
+        }
+
+        #MyImg3:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0.1)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        #sp {
+            border-bottom: 10px black;
+
+        }
+
+        #eg {
+            width: 100%;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <h1 id="heading" align="center" style="color:azure;">Compare car models</h1>
+    <div id="dropdown">
+
+        <section class="features">
+
+            <figure>
+                <img src="../img/rolls-phantom-gentlemans-tourer-01.jpg" id="MyImg1" alt="car1" width="300" height="200">
+                <form action="">
+<!--                    <select name="" id="dd1" onchange="configDDlist(this,document.getElementById('mn1'))">-->
+                    <select name="" id="dd1" onchange="drop_down(this)">
+                        <option value='select'>--Select--</option>
+                        <option value='marutisuzuki'>Marutisuzuki</option>
+                        <option value='hyundai'>Hyundai</option>
+                        <option value='mahindra'>Mahindra</option>
+                        <option value='tata'>Tata</option>
+                        <option value='toyota'>Toyota</option>
+                        <option value='renault'>Renault</option>
+                        <option value='honda'>Honda</option>
+                        <option value='mg'>Mg</option>
+                        <option value='ford'>Ford</option>
+                        <option value='kia'>Kia</option>
+                        <option value='volkswagen'>Volkswagen</option>
+                        <option value='mercedesbenz'>Mercedesbenz</option>
+                        <option value='bmw'>Bmw</option>
+                        <option value='skoda'>Skoda</option>
+                        <option value='audi'>Audi</option>
+                        <option value='jeep'>Jeep</option>
+                        <option value='datsun'>Datsun</option>
+                        <option value='landrover'>Landrover</option>
+                        <option value='nissan'>Nissan</option>
+                        <option value='jaguar'>Jaguar</option>
+                        <option value='volvo'>Volvo</option>
+                        <option value='porsche'>Porsche</option>
+                        <option value='lexus'>Lexus</option>
+                        <option value='fiat'>Fiat</option>
+                        <option value='lamborghini'>Lamborghini</option>
+                        <option value='isuzu'>Isuzu</option>
+                        <option value='mitsubishi'>Mitsubishi</option>
+                        <option value='mini'>Mini</option>
+                        <option value='forcemotors'>Forcemotors</option>
+                        <option value='bentley'>Bentley</option>
+                        <option value='rollsroyce'>Rollsroyce</option>
+                        <option value='dc'>Dc</option>
+                        <option value='ferrari'>Ferrari</option>
+                        <option value='maserati'>Maserati</option>
+                        <option value='astonmartin'>Astonmartin</option>
+                        <option value='bugatti'>Bugatti</option>
+                        <option value='tesla'>Tesla</option>
+
+                    </select>
+                </form>
+                <form action="">
+                    <select name="" id="mn1" onchange="car_details(this)">
+
+                    </select>
+                </form>
+                <figcaption></figcaption>
+            </figure>
+            <figure>
+                <img src="../img/rolls-phantom-gentlemans-tourer-01.jpg" id="MyImg2" alt="car2" width="300" height="200">
+                <form action="">
+<!--                    <select name="" id="dd2" onchange="configDDlist(this,document.getElementById('mn2'))">-->
+<select name="" id="dd2" onchange="drop_down(this)">
+                    <option value='select'>--Select--</option>
+                        <option value='marutisuzuki'>Marutisuzuki</option>
+                        <option value='hyundai'>Hyundai</option>
+                        <option value='mahindra'>Mahindra</option>
+                        <option value='tata'>Tata</option>
+                        <option value='toyota'>Toyota</option>
+                        <option value='renault'>Renault</option>
+                        <option value='honda'>Honda</option>
+                        <option value='mg'>Mg</option>
+                        <option value='ford'>Ford</option>
+                        <option value='kia'>Kia</option>
+                        <option value='volkswagen'>Volkswagen</option>
+                        <option value='mercedesbenz'>Mercedesbenz</option>
+                        <option value='bmw'>Bmw</option>
+                        <option value='skoda'>Skoda</option>
+                        <option value='audi'>Audi</option>
+                        <option value='jeep'>Jeep</option>
+                        <option value='datsun'>Datsun</option>
+                        <option value='landrover'>Landrover</option>
+                        <option value='nissan'>Nissan</option>
+                        <option value='jaguar'>Jaguar</option>
+                        <option value='volvo'>Volvo</option>
+                        <option value='porsche'>Porsche</option>
+                        <option value='lexus'>Lexus</option>
+                        <option value='fiat'>Fiat</option>
+                        <option value='lamborghini'>Lamborghini</option>
+                        <option value='isuzu'>Isuzu</option>
+                        <option value='mitsubishi'>Mitsubishi</option>
+                        <option value='mini'>Mini</option>
+                        <option value='forcemotors'>Forcemotors</option>
+                        <option value='bentley'>Bentley</option>
+                        <option value='rollsroyce'>Rollsroyce</option>
+                        <option value='dc'>Dc</option>
+                        <option value='ferrari'>Ferrari</option>
+                        <option value='maserati'>Maserati</option>
+                        <option value='astonmartin'>Astonmartin</option>
+                        <option value='bugatti'>Bugatti</option>
+                        <option value='tesla'>Tesla</option>
+
+                    </select>
+                </form>
+                <form action="">
+                    <select name="" id="mn2" onchange="car_details(this)">
+
+                    </select>
+                </form>
+                <figcaption></figcaption>
+            </figure>
+            <figure>
+                <img src="../img/rolls-phantom-gentlemans-tourer-01.jpg" id="MyImg3" alt="car3" width="300" height="200">
+                <form action="">
+<!--                    <select name="" id="dd3" onchange="configDDlist(this,document.getElementById('mn3'))">-->
+                    <select name="" id="dd3" onchange="drop_down(this)">    
+                    <option value='select'>--Select--</option>
+                        <option value='marutisuzuki'>Marutisuzuki</option>
+                        <option value='hyundai'>Hyundai</option>
+                        <option value='mahindra'>Mahindra</option>
+                        <option value='tata'>Tata</option>
+                        <option value='toyota'>Toyota</option>
+                        <option value='renault'>Renault</option>
+                        <option value='honda'>Honda</option>
+                        <option value='mg'>Mg</option>
+                        <option value='ford'>Ford</option>
+                        <option value='kia'>Kia</option>
+                        <option value='volkswagen'>Volkswagen</option>
+                        <option value='mercedesbenz'>Mercedesbenz</option>
+                        <option value='bmw'>Bmw</option>
+                        <option value='skoda'>Skoda</option>
+                        <option value='audi'>Audi</option>
+                        <option value='jeep'>Jeep</option>
+                        <option value='datsun'>Datsun</option>
+                        <option value='landrover'>Landrover</option>
+                        <option value='nissan'>Nissan</option>
+                        <option value='jaguar'>Jaguar</option>
+                        <option value='volvo'>Volvo</option>
+                        <option value='porsche'>Porsche</option>
+                        <option value='lexus'>Lexus</option>
+                        <option value='fiat'>Fiat</option>
+                        <option value='lamborghini'>Lamborghini</option>
+                        <option value='isuzu'>Isuzu</option>
+                        <option value='mitsubishi'>Mitsubishi</option>
+                        <option value='mini'>Mini</option>
+                        <option value='forcemotors'>Forcemotors</option>
+                        <option value='bentley'>Bentley</option>
+                        <option value='rollsroyce'>Rollsroyce</option>
+                        <option value='dc'>Dc</option>
+                        <option value='ferrari'>Ferrari</option>
+                        <option value='maserati'>Maserati</option>
+                        <option value='astonmartin'>Astonmartin</option>
+                        <option value='bugatti'>Bugatti</option>
+                        <option value='tesla'>Tesla</option>
+                    </select>
+                </form>
+                <form action="">
+                    <select name=""id="mn3" onchange="car_details(this)">
+
+                    </select>
+                </form>
+                <figcaption></figcaption>
+            </figure>
+        </section>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close">×</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <div id="enginesubct">
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Car1</th>
+                    <th scope="col">Car2</th>
+                    <th scope="col">Car3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"id="Price">Price</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row" id= "FuelType">Fuel Type</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row" id= "Transmission">Transmission</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row" id="Engine">Engine</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row" id="Seating Capacity">Seating Capacity</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row" id= "Mileage">Mileage</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">User rating</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('MyImg1');
+        var img2 = document.getElementById('MyImg2');
+        var img3 = document.getElementById('MyImg3');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        img2.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        img3.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        function configDDlist(dd1, ddl2) {
+            var audi = ['Q3', 'A3', 'Q5', 'R8'];
+            var bmw = ['750d', '250d', '320d'];
+            var porsche = ['carrera'];
+            var lambo = ['gallardo', 'huracan'];
+            switch (dd1.value) {
+                case 'audi':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < audi.length; i++) {
+                        createOption(ddl2, audi[i], audi[i]);
+                    }
+                    break;
+                case 'BMW':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < bmw.length; i++) {
+                        createOption(ddl2, bmw[i], bmw[i]);
+                    }
+                    break;
+                case 'Porsche':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < porsche.length; i++) {
+                        createOption(ddl2, porsche[i], porsche[i]);
+                    }
+                    break;
+                case 'Lambhorgini':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < lambo.length; i++) {
+                        createOption(ddl2, lambo[i], lambo[i]);
+                    }
+                    break;
+                default:
+                    ddl2.options.length = 0;
+                    break;
+
+            }
+        }
+
+        function createOption(ddl, text, value) {
+            var opt = document.createElement('option');
+            opt.value = value;
+            opt.text = text;
+            ddl.options.add(opt);
+        }
+
+    </script>
+
+    <script type="text/javascript" src="../js/compare.js"></script>>
+</body>
+
+</html>

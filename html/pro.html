@@ -1,0 +1,356 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Noticia+Text|Rye&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+    <style>
+      html,body{
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+    header {
+  margin: 0;
+  padding: 0;
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/foodbackground-min.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/abc.jpg");
+	background-size: cover;
+  background-attachment: fixed;
+	background-position: center;
+	height: 125%;
+}
+.navbar{
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  margin-left:70px;
+  padding-left:60px;
+  padding-right:60px;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-size:130%;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+
+}
+.artone{
+  width:100%;
+  height:45%;
+  background-color: aquamarine;
+  justify-content: right;
+ 
+}
+.imageone
+{
+  height:100%;
+  width:35%;
+  background:url(../img/abc.jpg) no-repeat;
+  background-size: cover;
+}
+.info{
+  background-attachment: fixed;
+  height:100%;
+  width:75%;
+  margin-left:30%;
+  margin-top:0%;
+  word-wrap: break-word;
+
+}
+.header-text{
+	position: absolute;
+	width: 1200px;
+	top:45%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); 
+  font: fantasy;
+  color:white;
+  font-weight: 100;
+  font-size: 125%;
+  font-family: 'Josefin Sans', sans-serif;
+  position:absolute;
+}
+h1 { color: #7c795d;
+     font-family: 'Trocchi', serif;
+      font-size: 45px;
+       font-weight: normal;
+        line-height: 48px;
+         margin: 0;
+          }
+p { 
+  color: #4c4a37;
+ font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+   line-height: 32px; 
+   margin: 0 0 24px; 
+   margin-left:10%;
+   }
+#p1{
+  margin-left:10%;
+}
+.articleone{
+  width:100%;
+  height: 35%;
+  overflow:visible;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height:60vh;
+}
+.slideshow{
+  width:600px;
+  height:350px;
+  background-image: url('../img/1.jpg');
+  background-position: center;
+  background-size: cover;
+  transition:1s ease-in;
+  border-radius: 4 px;
+  box-shadow:0 14px 28px rgba(0,0,0,0.25),
+             0 10px 10px rgba(0,0,0,0.22),
+
+}
+#info{
+  float:left;
+  margin-left:42%;
+  margin-top:-18%
+}
+footer{
+  width:100%;
+  height:25%;
+  background-color: darkgray;
+}
+.searchBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+.contentmain {
+  /* position: absolute; */
+  
+  height:30%;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color:white;
+  width: 100%;
+}
+.comparecars{
+  height:55%;
+  width:40%;
+  margin-left:5%;
+  background-color:rgb(16, 3, 41);
+}
+.comparecars button{
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    color: white;
+    cursor:pointer;
+    size: 5em;
+    overflow: hidden;
+}
+.onroadprice{
+  width:50%;
+  margin-left:50%;
+  margin-top:-20%; 
+  float: left;
+  height:35%;
+  background-color:rgb(42, 53, 70);
+}
+.onroadprice button{
+  border: 1px solid white;
+    border-radius: 5px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    color: white;
+    cursor:pointer;
+    font-size: 150%;
+    margin-top:5%;
+    overflow: hidden;
+}
+    </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+  <ul>
+    <li><a class="active" href="pro.html">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="contactus.html" target="_blank">Contact</a></li>
+    <li><a href="aboutus.html" target="_blank">About</a></li>
+    <li><a href="loginpage.html" target="_blank">Login</a></li>
+  </ul>
+</div>
+<br><br><br><br><br><br><br><br><br>
+<div class="contentmain">
+    <br>
+    <h1 style="color: white; letter-spacing:10px;font-size: 5em; ">CAR PORTAL</h1>
+      <br><br>
+    <p style="color: white;font-family: 'Dancing Script', cursive; font-size: 3em;margin-left: 0%;">Life is too short to drive boring cars</p>
+    <center><h2 style="font-family: 'Rye', cursive;">CHOOSE THE RIGHT ONE</h2></center>
+   
+</div>
+<div class="searchBox">
+
+    <input class="searchInput"type="text" name="" placeholder="Search">
+    <button class="searchButton" href="#">
+        <i class="material-icons">search</i>
+    </button>
+>
+</header>
+<br><br><br>
+<div id="news">
+  <br><br><br>
+<center><h1 style="color: black;font-size: 400%; letter-spacing:500%;">News</h1></center><br><br><br>
+    <br><br><br><br><br><br>
+  </div> 
+  <div class="articleone">
+    <img style="height:100%;width:40%;margin-left:0%;border:2px solid #333;border-radius:10px;"src="../img/kia_k5.jpg" alt="image to be here"></img>
+    <div id="info">
+      <br>
+      <h1 style="color:black;"><b>New Kia K5 Sedan revealed</b></h1>
+      <br><br>
+      <p id="abcdef" style="margin-left: 0%;">Kia Motors has revealed exterior images of the all-new Kia K5 – or as it’s known in some international markets, the Optima. Released in Korean market specification, the latest model offers a fresh and innovative new look for the sedan segment and showcases Kia’s bold new design direction.</p></div>
+  </div> 
+  <br><br><br><br><br><br><br><br>
+  <div class="articleone">
+      <img style="height:100%;width:40%;margin-left:0%;border:2px solid #333;border-radius:10px;"src="../img/Lamborghini.jpg" alt="image to be here"></img>
+      <div id="info">
+        <h1 style="color: black;"><b>2020 Mercedes-Benz GLE India bookings open</b></h1>
+        <p id="abcdef" style="margin-left: 0%;"> Mercedes-Benz India has officially announced acceptance of bookings for the next-gen GLE SUV. The company has also confirmed that the model will see a price announcement sometime around February 2020 just ahead of the Auto Expo 2020 that starts on February 5. 
+          The fourth-gen GLE (known earlier as the M-Class) gets fresh styling but continues with its unique exterior look that is carried over from the first-gen SUV.  It has more cabin space, thanks to its added length and a wheelbase increase of around 80mm.  On the inside the new SUV gets two 12.3-inch screens along with a multi-functional steering wheel, similar to the ones seen on the newer Mercedes-Benz models. </p></div>
+    </div> 
+    <br><br><br><br><br><br><br><br>
+  <div class="articleone">
+      <img style="height:100%;width:40%;margin-left:0%;border:2px solid #333;border-radius:10px;"src="../img/Audi_a8.jpg" alt="image to be here"></img>
+      <div id="info"><br>
+        <h1 style="color: black;"><b>Audi Q8 SUV to be launched in India on January 15, 2020</b></h1>
+        <br>
+        <p id="abcdef" style="margin-left: 0%;"> Audi will kick-off 2020 with a bang with the launch of its range-topping Q8 SUV. In an interview with PTI, Balbir Dhillon, head of Audi India, disclosed that the Q8 will launch on January 15, 2020. The company's flagship SUVwill be brought to India as a full import and hence will be subjected to all the duties and taxes. This means we can expect the Audi Q8 prices to start at Rs 1 crore (ex-showroom).   
+            The Q8 for India will likely get only a petrol engine, keeping in mind Audi’s wait and watch approach for diesels in the BS6 era. </p></div>
+    </div> 
+  <br><br><br><br><br><br>
+  <hr>
+  <center><h1 style="color: black;font-size:300%;letter-spacing:0.5em;">POPULAR CARS</h2></center>
+  <div class="container"> 
+      <div class="slideshow" id="carimg"></div>
+  </div>
+  <center><h2 id="car_name" style="font-family: 'Rye', cursive;letter-spacing:0.9em;"></h2></center>
+  
+    <script>
+      var slideshowone=document.getElementById("carimg");
+      var count=0;
+      var images=['Rolls_Royce.jpg','Fortuner.jpg','Lamborghini.jpg','Audi_a8.jpg','kia_k5.jpg'];
+      var limit=images.length-1;
+      var i=setInterval(slidimage,1500);
+      function slidimage(){
+         
+        //  if (count==limit)
+        //         count=0;
+        //  else  
+        //       count++;
+        //   alert(images[count]);
+          var change = images[count++%images.length] ;
+          console.log(change);
+          document.getElementById("car_name").innerHTML=""+change.replace(".jpg","")+"";
+
+        slideshowone.style.backgroundImage="url('../img/"+change+"')" ;
+        }
+    
+      window.addEventListener(onload,slidimage);
+    </script>
+  <div class="comparecars">
+        <br>
+        <center><h2 style="color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><b>CAR COMPARSION</b></h2></center>
+        <img src="../img/kia_k5.jpg" style="height: 45%; width:40%; margin:5%;" alt="">
+        <img src="../img/Fortuner.jpg" style="height: 45%; width: 40%; margin-top:-35%; margin-bottom: 5%;margin-left:55%;margin-right: 5%;" alt="">
+        <center><button>COMPARE CARS</button></center>
+  </div>
+  <div class="onroadprice">
+      <center>
+        <h1 style="font-family:'Dancing Script', cursive ;color: white;margin-top: 5%;">Wanna know the price of a car</h1>
+        <b><button>CLICK HERE</button></b>
+      </center>
+  </div>
+  <br><br><br>
+  <footer>
+
+  </footer>
+</body>
+</html>
