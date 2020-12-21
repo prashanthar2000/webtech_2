@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  color:black;
+  background-image:linear-gradient(to right,#4ca1af, #c4e0e5);
+  background-repeat: no-repeat;
+}
+footer{
+    background-color:black;
+    color:white;
+    font-weight:1.5em;
+    margin-bottom: 0%;
+    width:100%;
+    height:-25%;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:black;
+  opacity:0.9;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 150%;
+  font-weight:2%;
+  color: #e4e4ee;
+  display: block;
+  opacity:0.6;
+  transition: 0.3s;
+  
+}
+.sidenav a:hover {
+  color:white;
+  opacity:1;
+  border:1.5px solid white;
+  border-radius:10em;
+}
+.sidenav a:visited{
+  color:white;
+  opacity:1;
+  border:1.5px solid white;
+  border-radius:10em;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 50px;
+  margin-left: 75px;
+}
+/*
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+ } */
+
+article {
+    display: block;
+    width:100%;
+    height:5%;
+    margin-left:5%;
+    margin-right:5%;
+
+}
+article p{
+    margin-top:0%;
+    padding: 0;
+    float:left;
+    margin-left:40%;
+}
+.a1 {
+    display: block;
+    width:100%;
+    height:5%;
+    margin-left:5%;
+    margin-right:5%;
+
+}
+.a1 .text {
+  float:right;
+}
+.sbar {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 150%;
+  font-weight:2%;
+  color: #e4e4ee;
+  display: block;
+  opacity:0.6;
+  transition: 0.3s;
+  
+}
+</style>
+</head>
+<body>
+ 
+
+<div id="mySidenav" class="sidenav">
+  <div id="cbtn"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div><br><br><br>
+  
+  <a class="active" href="asdf - copy.html"><i class="fa fa-fw fa-home"></i> Home</a><br><br><br><br>
+  <a href="#" onclick="opensearchbar"><i class="fa fa-fw fa-search"></i> Search</a> <br><br><br><br>
+  <a href="Contactus.html" style="transition: " target="_blank"><i class="fa fa-fw fa-envelope"></i> Contact</a> <br><br><br><br>
+  <a href="loginpage.html" target="_blank"><i class="fa fa-fw fa-user"></i> Login</a><br><br>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<div style="margin:-5%  40%" width=30% height=15%><img src="logo.png" style="width:100% height:100%"  alt="logo was to supposed to be here"></div>
+<h1 style="margin-left:50%">News</h1>
+<div class="a1" id="aone">
+  <h1>Car name</h1>
+  <img src="abc.jpg" height="100%" width="40%">
+  <p id="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, nam animi sapiente maxime voluptate expedita eum illum voluptatum distinctio omnis fugiat repudiandae, minima tempora necessitatibus. Ut consectetur rerum pariatur sapiente!</p>
+    
+  
+</div>
+<article class="second" id="a2">
+        <h1>Car Name</h1>
+        <img src="abc.jpg" height="100%" width="40%">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, nam animi sapiente maxime voluptate expedita eum illum voluptatum distinctio omnis fugiat repudiandae, minima tempora necessitatibus. Ut consectetur rerum pariatur sapiente!</p>
+    </article>
+    <article class="three" id="a3">
+            <h1>Car Name</h1>
+            <img src="abc.jpg" height="100%" width="40%">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, nam animi sapiente maxime voluptate expedita eum illum voluptatum distinctio omnis fugiat repudiandae, minima tempora necessitatibus. Ut consectetur rerum pariatur sapiente!</p>
+        </article>
+        <div id="searchbar" class="sbar">
+          <input type="text" placeholder="Search by Model Name,Brand.." name=tbs>
+        </div>
+        <footer>
+          <h2 style="margin-left:0%;">Sponsored by</h4>
+          <h3>CARWAALE</h3>
+        </footer>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+function opensearchbar() {
+  document.getElementById("searchbar").style.width = "100%";
+}
+
+function closesearchbar() {
+  document.getElementById("searchbar").style.width = "0";
+}
+</script>
+   
+</body>
+</html> 
